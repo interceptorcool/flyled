@@ -1,0 +1,43 @@
+{
+"STRIPLEDPIXELCOUNT":50,
+"SETMAXIMUMBRIGTH":254,
+"OUTPUTS":[0,0,0,0],
+"INITOUT":[0,0,0,0],
+"INPUTS" :[1510, 100],
+"BATTARY":{
+	"TYPE":0,
+	"DELAY_MS":300,
+	"LED0":["R","B","lG"],
+	"CRITICAL":"",
+	"WARNING":""
+},
+"POWERON":{
+	"COUNTS":1000,
+	"DELAY_MS":10000,
+	"ACTIONSTEP":["tfade","all_dark"]
+},
+"LEDGROUP": {
+	"TEST":["all"]
+},
+"LEDCOLOR": {
+	"D":"#000000",
+	"W":"#FEFEFE",
+	"R":"#FF0000",
+	"G":"#00FF00",
+	"lG":"#000F00",
+	"B":"#0000FF"
+},
+"RECEIVERINPUTS": {"MISSED_ACTION": ["all_dark"]},
+"all_dark":{"GLOW":{"TEST":"D"}},
+"tfade":{
+	"FADE.0":{
+		"DELAY_MS": [3000, 25],
+		"DIRSPEED": [1, 20],
+		"TEST":"R"
+	},
+	"FADE.1":{
+		"DELAY_MS": [4000, 25],
+		"DIRSPEED": [0, 20],
+		"TEST":"W"
+	}}
+}

@@ -1,0 +1,64 @@
+{
+"STRIPLEDPIXELCOUNT":460,
+"SETMAXIMUMBRIGTH":30,
+"OUTPUTS":[0,0,0,0],
+"INITOUT":[0,0,0,0],
+"INPUTS" :[1510, 100],
+"BATTARY":{
+	"TYPE":0,
+	"DELAY_MS":300,
+	"LED0":["R","B","lG"],
+	"CRITICAL":"",
+	"WARNING":""
+},
+"POWERON":{
+	"COUNTS":1000,
+	"DELAY_MS":3000,
+	"ACTIONSTEP":["all_dark","wR","wL","w1"]
+},
+"LEDGROUP": {
+	"WRT":["1-16","22-37","92-107"],
+	"WRB":["38-53","57-72","73-89"],
+    "WRTE":["17-21"],
+    "WRBE":["54-56",90,91],
+    "WLT":["108-123","129-144","199-214"],
+    "WLB":["145-160","164-196"],
+    "WLTE":["124-128"],
+    "WLBE":["161-163",197,198],
+    "HL":["215-220"],
+    "HB":["221-225"],
+    "FB":["226-250"],
+    "RF":["251-255","263-288","296-300"],
+    "RE":["256-262","289-295"],
+	"TEST":["all"]    
+},
+"LEDCOLOR": {
+	"D":"#000000",
+	"W":"#FEFEFE",
+	"R":"#FF0000",
+	"G":"#00FF00",
+	"lG":"#000F00",
+	"B":"#0000FF"
+},
+"RECEIVERINPUTS": {"MISSED_ACTION": ["all_dark"]},
+"all_dark":{"GLOW":{"TEST":"W"}},
+"w1":{"GLOW":{
+    "HL":"R",
+    "HB":"G",
+    "FB":"B",
+    "RF":"W",
+    "RE":"R"
+}},
+"wR":{"GLOW":{
+    "WRT":"R",
+    "WRB":"G",
+    "WRTE":"B",
+    "WRBE":"W" 
+}},
+"wL":{"GLOW":{
+    "WLT":"R",
+    "WLB":"G",
+    "WLTE":"B",
+    "WLBE":"W" 
+}}
+}

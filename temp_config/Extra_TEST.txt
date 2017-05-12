@@ -1,0 +1,42 @@
+{
+"STRIPLEDPIXELCOUNT":460,
+"SETMAXIMUMBRIGTH":254,
+"OUTPUTS":[0,0,0,0],
+"INITOUT":[0,0,0,0],
+"INPUTS" :[1510, 100],
+"BATTARY":{
+	"TYPE":0,
+	"DELAY_MS":300,
+	"LED0":["R","B","lG"],
+	"CRITICAL":"",
+	"WARNING":""
+},
+"POWERON":{
+	"COUNTS":1000,
+	"DELAY_MS":3000,
+	"ACTIONSTEP":["all_dark","all_B"]
+},
+"LEDGROUP": {
+	"WRT":["1-16","22-37","92-107"],
+	"WRB":["38-53","57-72","73-89"],
+    "WRTE":["17-21"],
+    "WRBE":["54-56",90,91],
+	"TEST":["all"]    
+},
+"LEDCOLOR": {
+	"D":"#000000",
+	"W":"#FEFEFE",
+	"R":"#FF0000",
+	"G":"#00FF00",
+	"lG":"#000F00",
+	"B":"#0000FF"
+},
+"RECEIVERINPUTS": {"MISSED_ACTION": ["all_dark"]},
+"all_dark":{"GLOW":{"TEST":"D"}},
+"all_R":{"GLOW":{
+    "WRT":"R",
+    "WRB":"G",
+    "WRTE":"B",
+    "WRBE":"W" 
+}}
+}

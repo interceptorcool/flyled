@@ -1,0 +1,138 @@
+{
+"STRIPLEDPIXELCOUNT":53,
+"SETMAXIMUMBRIGTH":254,
+"OUTPUTS":[0,0,0,0],
+"INITOUT":[0,0,0,0],
+"INPUTS" :[1510, 100],
+"BATTARY":{
+	"TYPE":0,
+	"DELAY_MS":300,
+	"LED0":["R","B","lG"],
+	"CRITICAL":"",
+	"WARNING":""
+},
+"POWERON":{
+	"COUNTS":1,
+	"DELAY_MS":1000,
+	"ACTIONSTEP":["A19"]
+},
+"LEDGROUP": {
+	"Model":["all"],
+	"LWT":[1,2,5,7],
+	"LWB":[6,8,9],
+	"RWT":[10,11,14,16],
+	"RWB":[15,17,18],
+	"H":["51-53"],
+	"FB":["20-23",38,19],
+	"ST":[24,27,30,33],
+	"SB":[28,29],
+	"FT":["34-37",47,48],
+	"R":["39-42","43-46"],
+	"EWT":[4,13],
+	"EWB":[3,12],
+	"EST":[26,31],
+	"ESB":[25,32],
+	"ER":[41,42],
+	"CAP":[49,50],
+	"B19":[19],
+	"star":["53-36","40-5","1-8","30-53"]
+},
+"LEDCOLOR": {
+	"D":"#000000",
+	"W":"#FEFEFE",
+	"R":"#FF0000",
+	"G":"#00FF00",
+	"lG":"#000F00",
+	"B":"#0000FF",
+	"O":"#FF7F00"
+},
+"RECEIVERINPUTS": {
+"MISSED_ACTION": ["all_dark"],
+"start":{"RCH1%":[-140,-100],"ACTION":["norm"]},
+"полёт":{"RCH1%":[-80,-40],"ACTION":["normF"]},
+"кислота":{"RCH1%":[100,140],"ACTION":["K"]},
+"звезды":{"RCH1%":[40,80],"ACTION":["star"]},
+"R2":{"RCH1%":[-20,20],"ACTION":["R"]}
+},
+
+"all_dark":{"GLOW":{"Model":"D"}},
+"R":{
+	"GLOW":{
+		"Model":"R"
+	}
+},
+"norm":{
+	"BRIGHT.0":100,
+	"GLOW.0":{
+		"R":"B",
+		"CAP":"B",
+		"H":"O",
+		"LWB":"R",
+		"RWB":"R",
+		"SB":"R",
+		"FB":"G",
+		"EWB":"R",
+		"ESB":"R",
+		"EWT":"R",
+		"EST":"R",
+		"ER":"R"
+	},
+	"BRIGHT.1":40,
+	"GLOW.1":{
+		"LWT":"W",
+		"RWT":"W",
+		"ST":"W",
+		"FT":"W"
+	}
+},
+"normF":{
+	"BRIGHT.0":100,
+	"GLOW.0":{
+		"R":"B",
+		"CAP":"B",
+		"LWB":"R",
+		"RWB":"R",
+		"SB":"R",
+		"FB":"G"
+	},
+	"BRIGHT.1":40,
+	"GLOW.1":{
+		"LWT":"W",
+		"RWT":"W",
+		"ST":"W",
+		"FT":"W"
+	},
+	"BLINK.0": {
+	 	"DELAY_MS":[150,200,150,200,300],
+		"EWB":["R","D","R","D","R"],
+		"ESB":["R","D","R","D","R"],
+		"EWT":["R","D","R","D","R"],
+		"EST":["R","D","R","D","R"],
+		"ER":["R","D","R","D","R"],
+		"H":["O","D","O","D","R"]
+	}
+},
+"A19":{
+	"GLOW":{
+		"B19":"G"
+	}
+},
+"K": {
+	"BRIGHT": 100,
+	"BLINK.0": {
+		"DELAY_MS": [50, 250],
+		"Model":["R","D"]
+	},
+	"BLINK.1": {
+		"DELAY_MS": [123, 253],
+		"Model":["R","G","D"]
+	}
+},
+"star":{
+	"FADE.0":{
+		"DELAY_MS": [2000, 25],
+		"DIRSPEED": [1, 200],
+		"star":"W"
+	}
+}
+}
