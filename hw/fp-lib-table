@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name ESP8266)(type KiCad)(uri /home/icool/Dropbox/workspace/kicadlib/kicad-ESP8266/ESP8266.pretty)(options "")(descr ""))
+  (lib (name WS2812B)(type KiCad)(uri /home/icool/Dropbox/workspace/kicadlib/WS2812B.pretty)(options "")(descr ""))
+)
