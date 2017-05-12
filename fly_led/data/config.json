@@ -1,0 +1,131 @@
+{
+"STRIPLEDPIXELCOUNT":45,
+"SETMAXIMUMBRIGTH":80,
+"OUTPUTS":[2,1,1,1],
+"INITOUT":[0,0,1,0],
+"INPUTS" :[1510,100,0,1],
+"BATTARY":{
+	"TYPE":0,
+	"DELAY_MS":1000,
+	"LED0":["R","lB","lG"],
+	"CRITICAL":"abat_crit",
+	"WARNING":""
+},
+"POWERON":{
+	"COUNTS":2,
+	"DELAY_MS":1000,
+	"ACTIONSTEP":["pwr", "ad"]
+},
+"LEDGROUP": {
+	"Wing.Left.Top":["1-4"],
+	"Wing.Left.Bottom":["5-8"],
+	"Wing.Rigth.Top":["9-12"],
+	"Wing.Rigth.Bottom":["13-16"],
+	"Hood":["17-22"],
+	"Fuselage.Bottom":["23-27",37],
+	"Stab.Rigth.Bottom":[28,29],
+	"Stab.Rigth.Top":[30,31],
+	"Stab.Left.Bottom":[32,33],
+	"Stab.Left.Top":[34,35],
+	"Ruder.Rigth":[36,40],
+	"Ruder.Left":[38,39],
+	"Fuselage.Top":["45-41"],
+	"Wing.Left.WingTip":[4,3,5,6,33,34],
+	"Wing.Rigth.WingTip":[12,11,13,14,29,30],
+	"Ligths.Front":[1,8,9,16],
+	"Centre.Top":[1,2,9,10,"Fuselage.Top",31,35],
+	"Centre.Bottom":[7,8,15,16,"Fuselage.Bottom",28,32],
+	"Wing.Top.R":[1,2,35],
+	"Wing.Top.L":[9,10,31],
+	"Model":["all"],
+	"Flash":[39,40],
+	"Flash1":[23],
+	"bat":["Flash",3,11],
+	"TOP":["Centre.Top","Wing.Top.R","Wing.Top.L"]
+},
+"LEDCOLOR": {
+	"D":"#000000",
+	"W":"#FFFFFF",
+	"R":"#FF0000",
+	"G":"#00FF00",
+	"B":"#0000FF",
+	"O":"#FF7F00",
+	"lR":"#700000",
+	"lG":"#007000",
+	"lB":"#000070"
+},
+"RECEIVERINPUTS": {
+"MISSED_ACTION": ["ngl"],
+"HuGu":{"RCH2%":[50,70],"ACTION":["ngl"] },
+"HuGc":{"RCH2%":[30,45],"ACTION":["K"] },
+"HuGd":{"RCH2%":[10,30],"ACTION":["act_w"]},
+"HdGu":{"RCH2%":[-15,-30],"ACTION":["adf"]},
+"HdGc":{"RCH2%":[-40,-60],"ACTION":["pwr"]},
+"Ip":  {"RCH2%":[-4,4],	"ACTION":["act_red"]}
+},
+"ad":{"GLOW":{"Model":"D"}},
+"adf":{"GLOW":{"Model":"D"},
+	"BRIGHT.1": 100,
+	"BLINK.0": {
+	 	"DELAY_MS":[150,200,150,200,600,150,200,150,200],
+		"Flash": ["W","D","W","D","D","D","D","D","D"],
+		"Flash1": ["D","D","D","D","D","R","D","R","D"]
+	}
+},
+"act_w":{"BRIGHT":100,"GLOW":{"Model":"W"}},
+"act_red":{"BRIGHT":100,"GLOW":{"Model":"R"}},
+"abat_crit":{
+	"BRIGHT": 100,
+	"BLINK.0":{
+		"DELAY_MS":[75,75],
+		"bat":["R","D"]
+	}
+},
+"ngl":{
+	"BRIGHT.0": 30,
+	"GLOW":{
+		"Wing.Left.WingTip":"R",
+		"Wing.Rigth.WingTip":"G",
+		"Centre.Top":"W",
+		"Centre.Bottom":"B"
+	},
+	"BRIGHT.1": 100,
+	"BLINK.0": {
+	 	"DELAY_MS":[150,200,150,200,600,150,200,150,200],
+		"Flash": ["W","D","W","D","D","D","D","D","D"],
+		"Flash1": ["D","D","D","D","D","R","D","R","D"]
+	}
+},
+"pwr":{
+	"BRIGHT.0": 30,
+	"GLOW":{
+		"Centre.Top":"W",
+		"Centre.Bottom":"B"
+	},
+	"BRIGHT.1": 100,
+	"FADE.0":{
+		"DELAY_MS": [1000, 25],
+		"CONFIG": [1, 20],
+		"Wing.Left.WingTip":"R",
+		"Wing.Rigth.WingTip":"G",
+		"Fuselage.Top":"W",
+		"Fuselage.Bottom":"B"
+	},
+	"FADE.1":{
+		"DELAY_MS": [500, 25],
+		"CONFIG": [1, 30],
+		"Hood":"O"
+	}
+},
+"K": {
+	"BRIGHT": 100,
+	"BLINK.0": {
+		"DELAY_MS": [50,250,50],
+		"TOP":["B","D","R"]
+	},
+	"BLINK.1": {
+		"DELAY_MS": [123,253,123],
+		"Centre.Bottom":["R","G","D"]
+	}
+}	
+}
