@@ -1,0 +1,57 @@
+{
+"STRIPLEDPIXELCOUNT":20,
+"SETMAXIMUMBRIGTH":254,
+"OUTPUTS":[0,0,0,0],
+"INITOUT":[0,0,0,0],
+"INPUTS" :[1510,100,0,0],
+"BATTARY":{
+	"TYPE":0,
+	"DELAY_MS":300,
+	"LED0":["R","B","lG"],
+	"CRITICAL":"",
+	"WARNING":""
+},
+"POWERON":{
+	"COUNTS":1000,
+	"DELAY_MS":3000,
+	"ACTIONSTEP":["all_dark","all_W","all_dark","all_R","all_dark","all_G","all_dark","all_B","all_dark","tfade","all_dark","tblink"]
+},
+"LEDGROUP": {
+	"TEST":["all"],
+	"blt1":["1-10"],
+	"blt2":["11-20"]
+},
+"LEDCOLOR": {
+	"D":"#000000",
+	"W":"#FEFEFE",
+	"R":"#FF0000",
+	"G":"#00FF00",
+	"lG":"#000F00",
+	"B":"#0000FF"
+},
+"RECEIVERINPUTS": {"MISSED_ACTION": ["all_dark"]},
+"all_dark":{"GLOW":{"TEST":"D"}},
+"all_R":{"GLOW":{"TEST":"R"}},
+"all_G":{"GLOW":{"TEST":"G"}},
+"all_B":{"GLOW":{"TEST":"B"}},
+"all_W":{"GLOW":{"TEST":"W"}},
+"tfade":{
+	"FADE.0":{
+		"DELAY_MS": [1000, 25],
+		"DIRSPEED": [1, 20],
+		"TEST":"R"
+	},
+	"FADE.1":{
+		"DELAY_MS": [500, 25],
+		"DIRSPEED": [0, 30],
+		"TEST":"G"
+	}
+},
+"tblink":{
+	"BLINK": {
+		 	"DELAY_MS":[100,100,100,400,100,100,100,400,100,100,100,400,100,100,100,400],
+			"blt1":["W","D","R","D","G","D","B","D"],
+			"blt2":["D","G","D","B","D","W","D","R"]
+	}
+}
+}
