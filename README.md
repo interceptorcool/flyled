@@ -1,8 +1,9 @@
 # flyled
 Fly Led controller for WS281x
 
-main module esp8266
+# Manual for config - temp_config/conf_prototype.txt
 
+main module esp8266
 
 Libraries:
 
@@ -17,3 +18,4 @@ global config: "INPUTS"
 
 # add
 action class: "RAND"
+
